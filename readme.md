@@ -10,9 +10,8 @@ Usage:
     
  **Arguments:**
 
- **FUNCTIONS:**  
-    -add - script will add storage to Proxmox (all arguments are required)  
-    -rm  - script will remove storage from Proxmox if exists (only STORAGE_ID is required)  
+  -add - script will add storage to Proxmox (all arguments are required)  
+  -rm  - script will remove storage from Proxmox if exists (only STORAGE_ID is required)  
 
   HOST_IP         - Proxmox Backup Server host IP address   
   STORAGE_ID      - Storage name for mounted Proxmox Backup Server storage  
@@ -35,9 +34,8 @@ Script for WOL (Wake On LAN)
 **Usage:**  
  WOL_on.sh <OPTION> <MAC> <INTERFACE>  
   
- **Arguments:**  
-  
-  **OPTION:**  
+ **Arguments:** 
+   
     -e - script will use etherwake (MAC and interface name is required)  
     -w - script will use wakeonlan (only MAC is required)  
   
@@ -60,10 +58,9 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
 
       
  **Argumenty:**   
-  
-  **FUNKCJE:**  
-    -add - skrypt doda storage do Proxmoxa (wymagane jest podanie wszystkich argumentów)  
-    -rm  - skrypt usuwa storage z Proxmoxa (należy podać STORAGE_ID do usunięcia)   
+ 
+  -add - skrypt doda storage do Proxmoxa (wymagane jest podanie wszystkich argumentów)  
+  -rm  - skrypt usuwa storage z Proxmoxa (należy podać STORAGE_ID do usunięcia)   
   
   HOST_IP         - Adres IP Proxmox Backup Server  
   STORAGE_ID      - Nazwa storage/magazynu pod jaką w Proxmox VE zostanie zamontowany storage Proxmox Backup Server  
@@ -86,7 +83,8 @@ Skrypt do funkcji WOL (Waken On LAN)
 **Użycie:*  
   WOL_on.sh <OPCJE> <MAC> <INTERFEJS_SIECIOWY>  
   
-  **OPCJE:**  
+  **OPCJE:** 
+    
     -e - skrpyt wykorzystuje komendę etherwake, która wymaga podania MAC adresu i nazwy interfejsu do wysłania pakietu  
     -w - skrypt wykorzystuje komendę wakeonlan, która wymaga podania MAC adresu  
 
