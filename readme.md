@@ -1,3 +1,6 @@
+## pbs_store.sh
+**[ENGLISH]**   
+  
 The script with function -add checks whether the specified Proxmox Backup Server host responds (or not) to the ping, 
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
 
@@ -23,10 +26,32 @@ Usage:
 
   ./pbs_store.sh add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
   
-  ./pbs_store.sh rm pbs_backup01  
+  ./pbs_store.sh rm pbs_backup01 
 
- ---
-
+## wol_send.sh  
+  
+Script for WOL (Wake On LAN)  
+  
+**Usage:**  
+ WOL_on.sh <OPTION> <MAC> <INTERFACE>  
+  
+ **Arguments:**  
+  
+  **OPTION:**  
+    -e - script will use etherwake (MAC and interface name is required)  
+    -w - script will use wakeonlan (only MAC is required)  
+  
+  MAC       - target MAC address  
+  INTERFACE - server interface to send packet 
+  
+**Example of use:**   
+  ./WOL_on.sh -e AA:BB:CC:DD:EE:FF ens1  
+  ./WOL_on.sh -w AA:BB:CC:DD:EE:FF  
+  
+---  
+## pbs_store.sh      
+**[POLISH]**      
+  
 Skrypt z funkcją -add sprawdza czy podany adres IP hosta z Proxmox Backup Server odpowiada na ping czy nie.  
 Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już zasób jeśli Proxmox Backup Server nie odpowiada na ping.  
   
@@ -53,4 +78,23 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
   ./pbs_store.sh add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
   
   ./pbs_store.sh rm pbs_backup01  
-    
+
+## wol_send.sh  
+  
+Skrypt do funkcji WOL (Waken On LAN)  
+  
+**Użycie:*  
+  WOL_on.sh <OPCJE> <MAC> <INTERFEJS_SIECIOWY>  
+  
+  **OPCJE:**  
+    -e - skrpyt wykorzystuje komendę etherwake, która wymaga podania MAC adresu i nazwy interfejsu do wysłania pakietu  
+    -w - skrypt wykorzystuje komendę wakeonlan, która wymaga podania MAC adresu  
+
+  MAC - docelowy MAC adres
+  INTERFACE - interjest sieciowy, który ma zostać użyty do wysłania pakietu
+   
+**Przykład:** 
+  ./WOL_on.sh -e AA:BB:CC:DD:EE:FF ens1  
+  ./WOL_on.sh -w AA:BB:CC:DD:EE:FF  
+
+      
