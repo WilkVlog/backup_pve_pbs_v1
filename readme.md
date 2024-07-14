@@ -23,9 +23,9 @@ Usage:
 
  **Example of use:**   
 
-  ./pbs_store.sh add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
+  ./pbs_store.sh -add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
   
-  ./pbs_store.sh rm pbs_backup01 
+  ./pbs_store.sh -rm pbs_backup01 
 
 ## wol_send.sh  
   
@@ -72,9 +72,9 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
   
  **Example of use:**   
   
-  ./pbs_store.sh add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
+  ./pbs_store.sh -add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
   
-  ./pbs_store.sh rm pbs_backup01  
+  ./pbs_store.sh -rm pbs_backup01  
 
 ## wol_send.sh  
   
