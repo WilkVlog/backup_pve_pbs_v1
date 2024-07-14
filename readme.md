@@ -90,10 +90,10 @@ Skrypt do funkcji WOL (Waken On LAN)
     -e - skrpyt wykorzystuje komendę etherwake, która wymaga podania MAC adresu i nazwy interfejsu do wysłania pakietu  
     -w - skrypt wykorzystuje komendę wakeonlan, która wymaga podania MAC adresu  
 
-  MAC - docelowy MAC adres
-  INTERFACE - interjest sieciowy, który ma zostać użyty do wysłania pakietu
+  MAC - docelowy MAC adres  
+  INTERFACE - nazwa karty sieciowej przez którą ma zostać wysłany pakiet
    
-**Przykład:** 
+**Przykład:**     
   ./WOL_on.sh -e AA:BB:CC:DD:EE:FF ens1  
   ./WOL_on.sh -w AA:BB:CC:DD:EE:FF  
 
