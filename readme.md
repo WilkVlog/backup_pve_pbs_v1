@@ -1,5 +1,6 @@
+## **[ENGLISH]**  
+  
 ## pbs_store.sh
-**[ENGLISH]**   
   
 The script with function -add checks whether the specified Proxmox Backup Server host responds (or not) to the ping, 
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
@@ -47,8 +48,10 @@ Script for WOL (Wake On LAN)
   ./WOL_on.sh -w AA:BB:CC:DD:EE:FF  
   
 ---  
-## pbs_store.sh      
-**[POLISH]**      
+
+## **[POLSKI]**  
+  
+## pbs_store.sh           
   
 Skrypt z funkcją -add sprawdza czy podany adres IP hosta z Proxmox Backup Server odpowiada na ping czy nie.  
 Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już zasób jeśli Proxmox Backup Server nie odpowiada na ping.  
