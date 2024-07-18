@@ -33,7 +33,7 @@ Usage:
     -rm  - script will remove storage from Proxmox if exists (only STORAGE_ID is required)
 
   HOST_IP         - Proxmox Backup Server host IP address 
-  STORAGE_ID      - Storage name for mounted Proxmox Backup Server storage
+  STORAGE_ID      - Storage name for mounted Proxmox Backup Server storage in Proxmox VE
   PBS_DATASTORE   - Storage name with backups in Proxmox Backup Server (datastore name from Proxmox Backup Server)
   PBS_FINGERPRINT - Proxmox Backup Server Fingerprint
   PBS_USERNAME    - Proxmox Backup Server user login
@@ -62,21 +62,29 @@ PBS_PASSWORD=$7
 if [ "$FUNCTION" = "-rm" ]; then
     echo "Unmounting storage $2"
     /usr/sbin/pvesm remove $2
-# Check if the required parameters are provided
-elif [[ -z "$FUNCTION" || -z "$HOST_IP" || -z "$STORAGE_ID" || -z "$PBS_DATASTORE" || -z "$PBS_FINGERPRINT" || -z "$PBS_USERNAME" || -z "$PBS_PASSWORD" ]]; then
-    echo "$HELP"
-else 
-    # Function add
-    # Add given STORAGE_ID to Proxmox storages if specified host responds to the ping.
-    # Function also removes given STORAGE_ID from Proxmox storages if specified host does not respond to the ping.
-    if [ "$FUNCTION" = "-add" ]; then
+
+# Function add
+# Add given Proxmox Backup Server storage to Proxmox storages if specified host responds to the ping.
+# Function also removes given Proxmox Backup Server storage from Proxmox storages if specified host does not respond to the ping.   
+elif [ "$FUNCTION" = "-add" ]; then
+    
+    # Check if the required parameters are provided
+    if [[ -z "$FUNCTION" || -z "$HOST_IP" || -z "$STORAGE_ID" || -z "$PBS_DATASTORE" || -z "$PBS_FINGERPRINT" || -z "$PBS_USERNAME" || -z "$PBS_PASSWORD" ]]; then
+        echo "------------------------------------------------------------------------------"
+        echo 
+        echo "Error: Missing parameters"
+        echo
+        echo "------------------------------------------------------------------------------"
+        echo "$HELP"    
+    else
         ping -c1 $HOST_IP 1>/dev/null 2>/dev/null
         SUCCESS=$?
 
         if [ $SUCCESS -eq 0 ]; then
             echo "Host $HOST_IP is responding"
 
-            if ! grep -q $STORAGE_ID "/etc/pve/storage.cfg"; then # check if STORAGE_ID doesn't exists in storage.cfg file, if it doesn't exists then add STORAGE_ID
+            # check if STORAGE_ID doesn't exists in storage.cfg file. If it doesn't exists then add STORAGE_ID
+            if ! grep -q $STORAGE_ID "/etc/pve/storage.cfg"; then 
                 echo "Mounting storage $STORAGE_ID"
                 /usr/sbin/pvesm add pbs $STORAGE_ID --datastore $PBS_DATASTORE --server $HOST_IP --fingerprint $PBS_FINGERPRINT --username $PBS_USERNAME --password $PBS_PASSWORD
             else
@@ -86,9 +94,13 @@ else
             echo "Host $HOST_IP is not responding"
             /usr/sbin/pvesm remove $STORAGE_ID
         fi
-    else # Print information if the function is not known
-        echo "Unknown function. Available functions: -add, -rm"
-        echo 
-        echo "$HELP"
     fi
+
+else # Print information if the function is not known
+    echo "------------------------------------------------------------------------------"
+    echo
+    echo "Error: Unknown function. Available functions: -add, -rm"
+    echo 
+    echo "------------------------------------------------------------------------------"
+    echo "$HELP"
 fi
