@@ -146,7 +146,7 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
   
 Skrypt do funkcji WOL (Waken On LAN)  
 
-Może być wymagane: 
+Może być wymagane:  
 apt update && apt install ethtool etherwake  
   
 **Użycie:*  
