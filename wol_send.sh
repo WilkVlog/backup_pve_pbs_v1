@@ -12,6 +12,9 @@ _VERSION="1.0.0"
 # Set executable permissions: 
 # chmod +x wol_send.sh
 #
+# Requirements:
+# apt update && apt install ethtool etherwake
+#
 # Published: 2024
 #
 #=============================================================================
