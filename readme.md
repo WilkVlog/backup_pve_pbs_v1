@@ -9,8 +9,8 @@
 The script with "add" checks whether the specified Proxmox Backup Server host responds (or not) to the ping, 
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
   
-Usage:  
- pbs_store_arg.sh <ARGUMENTS>  
+**Usage:**  
+ pbs_store_arg.sh <ARGS>  
   
  **Arguments:**  
   
@@ -35,7 +35,7 @@ Usage:
       
 ## pbs_store.sh
 
-Usage:
+**Usage:**  
  pbs_store.sh <FUNCTION> <HOST_IP> <STORAGE_ID> <PBS_DATASTORE> <PBS_FINGERPRINT> <PBS_USERNAME> <PBS_PASSWORD>
 
     
@@ -90,8 +90,8 @@ apt update && apt install ethtool etherwake
 The script with "add" checks whether the specified Proxmox Backup Server host responds (or not) to the ping, 
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
   
-Usage:  
- pbs_store_arg.sh <ARGUMENTS>  
+**Usage:**   
+ pbs_store_arg.sh <ARGS>  
   
  **Argumenty:**  
   
@@ -149,7 +149,7 @@ Skrypt do funkcji WOL (Waken On LAN)
 Może być wymagane:  
 apt update && apt install ethtool etherwake  
   
-**Użycie:*  
+**Użycie:**   
   WOL_on.sh <OPCJE> <MAC> <INTERFEJS_SIECIOWY>  
   
   **Argumenty:** 
