@@ -1,6 +1,6 @@
 ## **[ENGLISH]**  
 
-**pbs_storage_arg.sh** - script with argument parser (the order of arguments is not important)
+**pbs_storage_arg.sh** - script with argument parser (the order of arguments is not important)  
 **pbs_storage.sh** - script where arguments order is important
 
 
