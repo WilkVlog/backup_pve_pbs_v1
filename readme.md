@@ -10,7 +10,7 @@ The script with "add" checks whether the specified Proxmox Backup Server host re
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
   
 **Usage:**  
- pbs_store_arg.sh <ARGS>  
+ ```pbs_store_arg.sh <ARGUMENTS> ```
   
  **Arguments:**  
   
@@ -27,16 +27,16 @@ if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
   
  **Example of use:**  
   
-  ./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword  
+  ```./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword```  
   
-  ./pbs_store.sh -r -sn pbs_backup01  
+  ```./pbs_store.sh -r -sn pbs_backup01 ``` 
 
 
       
 ## pbs_store.sh
 
 **Usage:**  
- pbs_store.sh <FUNCTION> <HOST_IP> <STORAGE_ID> <PBS_DATASTORE> <PBS_FINGERPRINT> <PBS_USERNAME> <PBS_PASSWORD>
+ ```pbs_store.sh <FUNCTION> <HOST_IP> <STORAGE_ID> <PBS_DATASTORE> <PBS_FINGERPRINT> <PBS_USERNAME> <PBS_PASSWORD>```
 
     
  **Arguments:**
@@ -54,9 +54,9 @@ if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
 
  **Example of use:**   
 
-  ./pbs_store.sh -add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
+  ```./pbs_store.sh -add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  ```
   
-  ./pbs_store.sh -rm pbs_backup01 
+  ```./pbs_store.sh -rm pbs_backup01 ```
 
 ## wol_send.sh  
   
