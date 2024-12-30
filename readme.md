@@ -63,10 +63,10 @@ if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
 Script for WOL (Wake On LAN)  
 
 Can be required:  
-apt update && apt install ethtool etherwake  
+```apt update && apt install ethtool etherwake```  
   
 **Usage:**  
- WOL_on.sh <OPTION> <MAC> <INTERFACE>  
+ ```WOL_on.sh <OPTION> <MAC> <INTERFACE>```  
   
  **Arguments:** 
    
@@ -77,8 +77,8 @@ apt update && apt install ethtool etherwake
   INTERFACE - server interface to send packet 
   
 **Example of use:**   
-  ./WOL_on.sh -e AA:BB:CC:DD:EE:FF ens1  
-  ./WOL_on.sh -w AA:BB:CC:DD:EE:FF  
+  ```./WOL_on.sh -e AA:BB:CC:DD:EE:FF ens1```  
+  ```./WOL_on.sh -w AA:BB:CC:DD:EE:FF```  
   
 ---  
 
@@ -91,7 +91,7 @@ The script with "add" checks whether the specified Proxmox Backup Server host re
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
   
 **Usage:**   
- pbs_store_arg.sh <ARGS>  
+ ```pbs_store_arg.sh <ARGUMENTS>```  
   
  **Argumenty:**  
   
@@ -108,9 +108,9 @@ if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
   
  **Przykład użycia:**  
   
-  ./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword  
+  ```./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword```  
   
-  ./pbs_store.sh -r -sn pbs_backup01 
+  ```./pbs_store.sh -r -sn pbs_backup01``` 
 
      
 ## pbs_store.sh           
@@ -119,7 +119,7 @@ Skrypt z funkcją -add sprawdza czy podany adres IP hosta z Proxmox Backup Serve
 Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już zasób jeśli Proxmox Backup Server nie odpowiada na ping.  
   
 **Usage:**  
- pbs_store.sh <FUNKCJA> <ADRES_IP> <STORAGE_ID> <PBS_DATASTORE> <PBS_FINGERPRINT> <PBS_UZYTKOWNIK> <PBS_HASLO>  
+ ```pbs_store.sh <FUNKCJA> <ADRES_IP> <STORAGE_ID> <PBS_DATASTORE> <PBS_FINGERPRINT> <PBS_UZYTKOWNIK> <PBS_HASLO>```  
 
       
  **Argumenty:**   
@@ -137,9 +137,9 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
   
  **Przykład użycia:**     
   
-  ./pbs_store.sh -add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
+  ```./pbs_store.sh -add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword```  
   
-  ./pbs_store.sh -rm pbs_backup01  
+  ```./pbs_store.sh -rm pbs_backup01```  
 
   
 ## wol_send.sh  
@@ -147,10 +147,10 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
 Skrypt do funkcji WOL (Waken On LAN)  
 
 Może być wymagane:  
-apt update && apt install ethtool etherwake  
+```apt update && apt install ethtool etherwake```  
   
 **Użycie:**   
-  WOL_on.sh <OPCJE> <MAC> <INTERFEJS_SIECIOWY>  
+  ```WOL_on.sh <OPCJE> <MAC> <INTERFEJS_SIECIOWY>```  
   
   **Argumenty:** 
     
@@ -161,7 +161,7 @@ apt update && apt install ethtool etherwake
   INTERFACE - nazwa karty sieciowej przez którą ma zostać wysłany pakiet
    
 **Przykład:**     
-  ./WOL_on.sh -e AA:BB:CC:DD:EE:FF ens1  
-  ./WOL_on.sh -w AA:BB:CC:DD:EE:FF  
+  ```./WOL_on.sh -e AA:BB:CC:DD:EE:FF ens1```  
+  ```./WOL_on.sh -w AA:BB:CC:DD:EE:FF```  
 
       
