@@ -14,7 +14,7 @@ if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
  ```pbs_store_arg.sh <ARGUMENTS> ```
   
  **Arguments:**  
-  
+ 
     -h | --help             - help  
     -a | --add              - script will add storage to Proxmox (all arguments are required)  
     -r | --remove           - script will remove storage from Proxmox if exists (only storage-name is required)  
@@ -24,6 +24,7 @@ if so, it adds (or removes if not respond) the specified Proxmox Backup storage.
     -pf fingerprint | --pbs-fingerprint fingerprint - Proxmox Backup Server Fingerprint  
     -pu user | --pbs-username user           - Proxmox Backup Server user login  
     -pp password | --pbs-password password   - Proxmox Backup Server user password  
+    
   
   
  **Example of use:**  
