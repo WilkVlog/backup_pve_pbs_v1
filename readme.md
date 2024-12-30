@@ -1,7 +1,7 @@
 ## **[ENGLISH]**  
 
-**pbs_storage_arg.sh** - script with argument parser (the order of arguments is not important)  
-**pbs_storage.sh** - script where arguments order is important  
+**pbs_store_arg.sh** - script with argument parser (the order of arguments is not important)  
+**pbs_store.sh** - script where arguments order is important  
   
   
 ## pbs_store_arg.sh  
@@ -81,8 +81,8 @@ Script for WOL (Wake On LAN)
 
 ## **[POLSKI]**  
   
-**pbs_storage_arg.sh** - skrypt z parserem argumentów (kolejność argumentów/parametrów nie ma znaczenia)   
-**pbs_storage.sh** - skrypt dla którego istotna jest kolejnośc parametrów  
+**pbs_store_arg.sh** - skrypt z parserem argumentów (kolejność argumentów/parametrów nie ma znaczenia)   
+**pbs_store.sh** - skrypt dla którego istotna jest kolejnośc parametrów  
 
 The script with "add" checks whether the specified Proxmox Backup Server host responds (or not) to the ping, 
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
