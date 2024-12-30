@@ -17,12 +17,12 @@ Usage:
     -h | --help             - help  
     -a | --add              - script will add storage to Proxmox (all arguments are required)  
     -r | --remove           - script will remove storage from Proxmox if exists (only storage-name is required)  
-    -sn | --storage-name    - Storage name for mounted Proxmox Backup Server storage in Proxmox VE  
-    -pi | --pbs-ip          - Proxmox Backup Server host IP address  
-    -pd | --pbs-datastore   - Storage name with backups in Proxmox Backup Server (datastore name from Proxmox Backup Server)  
-    -pf | --pbs-fingerprint - Proxmox Backup Server Fingerprint  
-    -pu | --pbs-username    - Proxmox Backup Server user login  
-    -pp | --pbs-password    - Proxmox Backup Server user password  
+    -sn name | --storage-name name           - Storage name for mounted Proxmox Backup Server storage in Proxmox VE  
+    -pi IP | --pbs-ip IP                     - Proxmox Backup Server host IP address  
+    -pd name | --pbs-datastore name          - Storage name with backups in Proxmox Backup Server (datastore name from Proxmox Backup Server)  
+    -pf fingerprint | --pbs-fingerprint fingerprint - Proxmox Backup Server Fingerprint  
+    -pu user | --pbs-username user           - Proxmox Backup Server user login  
+    -pp password | --pbs-password password   - Proxmox Backup Server user password  
   
   
  **Example of use:**  
@@ -95,12 +95,12 @@ Usage:
     -h | --help             - Pomoc  
     -a | --add              - Skrypt doda storage do Proxmoxa (wymagane jest podanie wszystkich argumentów)  
     -r | --remove           - Skrypt usuwa storage z Proxmoxa (należy podać --storage-name do usunięcia) 
-    -sn | --storage-name    - Nazwa storage/magazynu pod jaką w Proxmox VE zostanie zamontowany storage Proxmox Backup Server 
-    -pi | --pbs-ip          - Adres IP Proxmox Backup Server   
-    -pd | --pbs-datastore   - Nazwa storage/magazynu backupów w Proxmox Backup Server (nazwa datastore z Proxmox Backup Server)  
-    -pf | --pbs-fingerprint - Proxmox Backup Server Fingerprint (tzw. odcisk palca dostępny w panelu PBS)  
-    -pu | --pbs-username    - Proxmox Backup Server użytkownik  
-    -pp | --pbs-password    - Proxmox Backup Server hasło użytkownika  
+    -sn name | --storage-name name   - Nazwa storage/magazynu pod jaką w Proxmox VE zostanie zamontowany storage Proxmox Backup Server 
+    -pi ip | --pbs-ip ip             - Adres IP Proxmox Backup Server   
+    -pd name | --pbs-datastore name  - Nazwa storage/magazynu backupów w Proxmox Backup Server (nazwa datastore z Proxmox Backup Server)  
+    -pf fingerprint | --pbs-fingerprint fingerprint - Proxmox Backup Server Fingerprint (tzw. odcisk palca dostępny w panelu PBS)  
+    -pu user | --pbs-username user   - Proxmox Backup Server użytkownik  
+    -pp password | --pbs-password password   - Proxmox Backup Server hasło użytkownika  
   
   
  **Przykład użycia:**  
