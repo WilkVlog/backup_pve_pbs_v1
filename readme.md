@@ -16,8 +16,8 @@ Usage:
   
     -h | --help             - help  
     -a | --add              - script will add storage to Proxmox (all arguments are required)  
-    -r | --remove           - script will remove storage from Proxmox if exists (only STORAGE_ID is required)  
-    -sn | --storage-name      - Storage name for mounted Proxmox Backup Server storage in Proxmox VE  
+    -r | --remove           - script will remove storage from Proxmox if exists (only storage-name is required)  
+    -sn | --storage-name    - Storage name for mounted Proxmox Backup Server storage in Proxmox VE  
     -pi | --pbs-ip          - Proxmox Backup Server host IP address  
     -pd | --pbs-datastore   - Storage name with backups in Proxmox Backup Server (datastore name from Proxmox Backup Server)  
     -pf | --pbs-fingerprint - Proxmox Backup Server Fingerprint  
@@ -29,7 +29,7 @@ Usage:
   
   ./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword  
   
-  ./pbs_store.sh -r pbs_backup01  
+  ./pbs_store.sh -r -sn pbs_backup01  
 
 
       
@@ -81,6 +81,35 @@ Script for WOL (Wake On LAN)
 
 ## **[POLSKI]**  
   
+**pbs_storage_arg.sh** - skrypt z parserem argumentów (kolejność argumentów/parametrów nie ma znaczenia)   
+**pbs_storage.sh** - skrypt dla którego istotna jest kolejnośc parametrów  
+
+The script with "add" checks whether the specified Proxmox Backup Server host responds (or not) to the ping, 
+if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
+  
+Usage:  
+ pbs_store.sh <ARGUMENTS>  
+  
+ **Argumenty:**  
+  
+    -h | --help             - Pomoc  
+    -a | --add              - Skrypt doda storage do Proxmoxa (wymagane jest podanie wszystkich argumentów)  
+    -r | --remove           - Skrypt usuwa storage z Proxmoxa (należy podać --storage-name do usunięcia) 
+    -sn | --storage-name    - Nazwa storage/magazynu pod jaką w Proxmox VE zostanie zamontowany storage Proxmox Backup Server 
+    -pi | --pbs-ip          - Adres IP Proxmox Backup Server   
+    -pd | --pbs-datastore   - Nazwa storage/magazynu backupów w Proxmox Backup Server (nazwa datastore z Proxmox Backup Server)  
+    -pf | --pbs-fingerprint - Proxmox Backup Server Fingerprint (tzw. odcisk palca dostępny w panelu PBS)  
+    -pu | --pbs-username    - Proxmox Backup Server użytkownik  
+    -pp | --pbs-password    - Proxmox Backup Server hasło użytkownika  
+  
+  
+ **Przykład użycia:**  
+  
+  ./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword  
+  
+  ./pbs_store.sh -r -sn pbs_backup01 
+
+     
 ## pbs_store.sh           
   
 Skrypt z funkcją -add sprawdza czy podany adres IP hosta z Proxmox Backup Server odpowiada na ping czy nie.  
@@ -103,12 +132,13 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
   PBS_PASSWORD    - Proxmox Backup Server hasło użytkownika  
   
   
- **Example of use:**   
+ **Przykład użycia:**     
   
   ./pbs_store.sh -add 10.0.0.13 pbs_backup01 bakdisk1 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 backupuser@pbs secretPassword  
   
   ./pbs_store.sh -rm pbs_backup01  
 
+  
 ## wol_send.sh  
   
 Skrypt do funkcji WOL (Waken On LAN)  
