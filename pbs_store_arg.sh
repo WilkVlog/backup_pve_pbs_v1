@@ -29,7 +29,7 @@ Usage:
     -h | --help             - help
     -a | --add              - script will add storage to Proxmox (all arguments are required)
     -r | --remove           - script will remove storage from Proxmox if exists (only STORAGE_ID is required)
-    -sn | --storage-name      - Storage name for mounted Proxmox Backup Server storage in Proxmox VE
+    -sn | --storage-name    - Storage name for mounted Proxmox Backup Server storage in Proxmox VE
     -pi | --pbs-ip          - Proxmox Backup Server host IP address
     -pd | --pbs-datastore   - Storage name with backups in Proxmox Backup Server (datastore name from Proxmox Backup Server)
     -pf | --pbs-fingerprint - Proxmox Backup Server Fingerprint
@@ -41,7 +41,7 @@ Usage:
 
   ./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword
 
-  ./pbs_store.sh -r pbs_backup01
+  ./pbs_store.sh -r -sn pbs_backup01
 
 "
 SWHELP=false
