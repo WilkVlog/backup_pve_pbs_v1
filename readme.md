@@ -61,6 +61,9 @@ Usage:
 ## wol_send.sh  
   
 Script for WOL (Wake On LAN)  
+
+Can be required:  
+apt update && apt install ethtool etherwake  
   
 **Usage:**  
  WOL_on.sh <OPTION> <MAC> <INTERFACE>  
@@ -142,6 +145,9 @@ Jeśli odpowiada to dodaje/montuje storage w Proxmox VE lub usuwa dodany już za
 ## wol_send.sh  
   
 Skrypt do funkcji WOL (Waken On LAN)  
+
+Może być wymagane: 
+apt update && apt install ethtool etherwake  
   
 **Użycie:*  
   WOL_on.sh <OPCJE> <MAC> <INTERFEJS_SIECIOWY>  
