@@ -29,12 +29,12 @@ Usage:
     -h | --help             - help
     -a | --add              - script will add storage to Proxmox (all arguments are required)
     -r | --remove           - script will remove storage from Proxmox if exists (only STORAGE_ID is required)
-    -sn | --storage-name    - Storage name for mounted Proxmox Backup Server storage in Proxmox VE
-    -pi | --pbs-ip          - Proxmox Backup Server host IP address
-    -pd | --pbs-datastore   - Storage name with backups in Proxmox Backup Server (datastore name from Proxmox Backup Server)
-    -pf | --pbs-fingerprint - Proxmox Backup Server Fingerprint
-    -pu | --pbs-username    - Proxmox Backup Server user login
-    -pp | --pbs-password    - Proxmox Backup Server user password
+    -sn name | --storage-name name           - Storage name for mounted Proxmox Backup Server storage in Proxmox VE
+    -pi ip | --pbs-ip ip                     - Proxmox Backup Server host IP address
+    -pd name | --pbs-datastore name          - Storage name with backups in Proxmox Backup Server (datastore name from Proxmox Backup Server)
+    -pf fingerpint | --pbs-fingerprint fingerprint - Proxmox Backup Server Fingerprint
+    -pu user | --pbs-username user           - Proxmox Backup Server user login
+    -pp password | --pbs-password password   - Proxmox Backup Server user password
 
 
  Example of use: 
