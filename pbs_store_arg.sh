@@ -105,8 +105,8 @@ if ! $SWHELP; then # if help is not printed
     # Function rm
     # Remove given STORAGE_ID from Proxmox storages
     if [ "$FUNCTION" = "rm" ]; then
-        echo "Unmounting storage $2"
-        /usr/sbin/pvesm remove $2
+        echo "Unmounting storage $STORAGE_ID"
+        /usr/sbin/pvesm remove $STORAGE_ID
 
     # Function add
     # Add given Proxmox Backup Server storage to Proxmox storages if specified host responds to the ping.
