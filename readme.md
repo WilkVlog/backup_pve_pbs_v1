@@ -10,7 +10,7 @@ The script with "add" checks whether the specified Proxmox Backup Server host re
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
   
 Usage:  
- pbs_store.sh <ARGUMENTS>  
+ pbs_store_arg.sh <ARGUMENTS>  
   
  **Arguments:**  
   
@@ -91,7 +91,7 @@ The script with "add" checks whether the specified Proxmox Backup Server host re
 if so, it adds (or removes if not respond) the specified Proxmox Backup storage.  
   
 Usage:  
- pbs_store.sh <ARGUMENTS>  
+ pbs_store_arg.sh <ARGUMENTS>  
   
  **Argumenty:**  
   
