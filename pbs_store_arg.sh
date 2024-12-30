@@ -39,7 +39,7 @@ Usage:
 
  Example of use: 
 
-  ./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -ps bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword
+  ./pbs_store.sh -a -pi 10.0.0.50 -sn pbs_backup01 -pd bakdisk1 -pf 01:02:03:04:05:06:07:08:09:10:11:12:13:14:15:16:17:18:19:20:21:22:23:24:25:26:27:28:29:30:31:32 -pu backupuser@pbs -pp secretPassword
 
   ./pbs_store.sh -r pbs_backup01
 
